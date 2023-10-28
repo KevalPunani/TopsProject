@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackHole</title>
+    <link rel="icon" href="pictures/icon.png">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><img class="li_img" src="pictures/header.jpg"></li>
+            <li><a class="active" href="media.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+            <li><a href="index.html"><svg width="28" height="28" viewBox="0 0 48 48" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="48" height="48" fill="url(#pattern0)" />
+                            <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_13_1060" transform="scale(0.0111111)" />
+                                </pattern>
+                                <image id="image0_13_1060" width="90" height="90"
+                                    xlink:href="data:image/png;base64,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" />
+                            </defs>
+                        </svg>
+                    Website</a></li>
+            <li><a href="downloads.html"><i class="fa fa-fw fa-download"></i>Downloads</a></li>
+            <li><a href="playlists.html"><i class="fa fa-fw fa-list"></i>Playlists</a></li>
+            <!-- <li><a href="settings.html"><i class="fa fa-fw fa-gear"></i>Settings</a></li> -->
+            <li><a href="library.html"><img src="" alt=""><i class="fa fa-fw fa-book"></i>Library</a></li>
+            <li><a href="about.html"><i class="fa fa-fw fa-info-circle"></i>About</a></li>
+        </ul>
+    </nav>
+    <div class="main_div">
+
+        <div class="search">
+            <a href="#"><i class="fa fa-fw fa-search" style="color: deepskyblue;"></i> Songs, albums or
+                artists</a>
+        </div>
+
+        <div class="title1">Your Playlists</div>
+
+        <div class="div">
+            <div class="mdiv">
+                <a href="#" title="" target="_blank">
+                    <img src="pictures/cover.jpg" alt="cover"></a>
+                <a href="#" title="" target="_blank">
+                    <h3 style="text-align:center;">Favorite Songs</h3>
+                </a>
+            </div>
+        </div>
+
+        <div class="title2">Trending Now</div>
+
+        <div class="div">
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/810/6d4016438a97a3d227cff8b71d7dc897_96.mp4"
+                    title="A Thousand Years (Sped-Up Version)" target="_blank">
+                    <img src="https://c.saavncdn.com/810/A-Thousand-Years-From-The-Twilight-Saga-Breaking-Dawn-Sped-Up-Version-English-2023-20230106175929-500x500.jpg"
+                        alt="A Thousand Years (Sped-Up Version)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/810/6d4016438a97a3d227cff8b71d7dc897_96.mp4"
+                    title="A Thousand Years (Sped-Up Version)" target="_blank">
+                    <h3 style="text-align:center;">A Thousand Years (Sped-Up Version)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/848/0c394d82399e5c436623ab415acb315b_96.mp4"
+                    title="Apocalypse (Sped Up)" target="_blank">
+                    <img src="https://c.saavncdn.com/848/Apocalypse-sped-up-slowed-Cigarettes-After-Sex-English-2023-20230412065840-500x500.jpg"
+                        alt="Apocalypse (Sped Up)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/848/0c394d82399e5c436623ab415acb315b_96.mp4"
+                    title="Apocalypse (Sped Up)" target="_blank">
+                    <h3 style="text-align:center;">Apocalypse (Sped Up)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/734/5ce324b8da6b9adb25e3a2e69617035d_96.mp4"
+                    title="apocalypse - sped up" target="_blank">
+                    <img src="https://c.saavncdn.com/734/apocalypse-sped-up-Unknown-2023-20230130083124-500x500.jpg"
+                        alt="apocalypse - sped up" width="100%"></a>
+                <a href="https://aac.saavncdn.com/734/5ce324b8da6b9adb25e3a2e69617035d_96.mp4"
+                    title="apocalypse - sped up" target="_blank">
+                    <h3 style="text-align:center;">Apocalypse - Sped Up</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/033/be94414c59e9d1e38dc0313b1766aa54_96.mp4" title="Before You Go"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/033/Before-You-Go-English-2019-20191118230634-500x500.jpg"
+                        alt="Before You Go" width="100%"></a>
+                <a href="https://aac.saavncdn.com/033/be94414c59e9d1e38dc0313b1766aa54_96.mp4" title="Before You Go"
+                    target="_blank">
+                    <h3 style="text-align:center;">Before You Go</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/246/a259ee078c39f3f30f117b6739f8626b_96.mp4"
+                    title="careless whisper - sped up + reverb" target="_blank">
+                    <img src="https://c.saavncdn.com/246/careless-whisper-sped-up-reverb-Unknown-2022-20230203090436-500x500.jpg"
+                        alt="careless whisper - sped up + reverb" width="100%"></a>
+                <a href="https://aac.saavncdn.com/246/a259ee078c39f3f30f117b6739f8626b_96.mp4"
+                    title="careless whisper - sped up + reverb" target="_blank">
+                    <h3 style="text-align:center;">Careless Whisper - Sped Up + Reverb</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/490/dcd4fbfda2901dbbf5cd174b82051da7_96.mp4" title="Cheri Cheri Lady"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/490/Original-80-s-2014-500x500.jpg" alt="Cheri Cheri Lady"
+                        width="100%"></a>
+                <a href="https://aac.saavncdn.com/490/dcd4fbfda2901dbbf5cd174b82051da7_96.mp4" title="Cheri Cheri Lady"
+                    target="_blank">
+                    <h3 style="text-align:center;">Cheri Cheri Lady</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/943/f272b2becf5eb598852a97f9d2cd8ba7_96.mp4" title="CO2"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/943/The-Way-That-Lovers-Do-English-2022-20220517094947-500x500.jpg"
+                        alt="CO2" width="100%"></a>
+                <a href="https://aac.saavncdn.com/943/f272b2becf5eb598852a97f9d2cd8ba7_96.mp4" title="CO2"
+                    target="_blank">
+                    <h3 style="text-align:center;">CO2</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/407/fd494222c5b0293c71759a120b33d56c_96.mp4"
+                    title="Counting Stars (OneRepublic Cover)" target="_blank">
+                    <img src="https://c.saavncdn.com/407/Counting-Stars-OneRepublic-Cover-English-2014-500x500.jpg"
+                        alt="Counting Stars (OneRepublic Cover)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/407/fd494222c5b0293c71759a120b33d56c_96.mp4"
+                    title="Counting Stars (OneRepublic Cover)" target="_blank">
+                    <h3 style="text-align:center;">Counting Stars (OneRepublic Cover)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/677/47ec9de05e134e315fcb3693f95d8ab8_96.mp4"
+                    title="Cupid – Twin Ver. (FIFTY FIFTY) – Sped Up Version" target="_blank">
+                    <img src="https://c.saavncdn.com/677/Cupid-Twin-Ver-FIFTY-FIFTY-Sped-Up-Version-English-2023-20230406174637-500x500.jpg"
+                        alt="Cupid – Twin Ver. (FIFTY FIFTY) – Sped Up Version" width="100%"></a>
+                <a href="https://aac.saavncdn.com/677/47ec9de05e134e315fcb3693f95d8ab8_96.mp4"
+                    title="Cupid – Twin Ver. (FIFTY FIFTY) – Sped Up Version" target="_blank">
+                    <h3 style="text-align:center;">Cupid – Twin Ver. (FIFTY FIFTY) – Sped Up Version</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/785/c6c7a56af1518b62d80311a192beb56d_96.mp4"
+                    title="Dancing in My Room" target="_blank">
+                    <img src="https://c.saavncdn.com/785/Dancing-in-My-Room-English-2020-20201111124102-500x500.jpg"
+                        alt="Dancing in My Room" width="100%"></a>
+                <a href="https://aac.saavncdn.com/785/c6c7a56af1518b62d80311a192beb56d_96.mp4"
+                    title="Dancing in My Room" target="_blank">
+                    <h3 style="text-align:center;">Dancing In My Room</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/970/0ff9b0ab4f8706871a23b5b34f6c7ace_96.mp4" title="Dark Paradise"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/970/Born-To-Die-The-Paradise-Edition-English-2012-20190420034558-500x500.jpg"
+                        alt="Dark Paradise" width="100%"></a>
+                <a href="https://aac.saavncdn.com/970/0ff9b0ab4f8706871a23b5b34f6c7ace_96.mp4" title="Dark Paradise"
+                    target="_blank">
+                    <h3 style="text-align:center;">Dark Paradise</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/970/522ee745db817d3dd3877c169ea0f390_96.mp4" title="Diet Mountain Dew"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/970/Born-To-Die-The-Paradise-Edition-English-2012-20190420034558-500x500.jpg"
+                        alt="Diet Mountain Dew" width="100%"></a>
+                <a href="https://aac.saavncdn.com/970/522ee745db817d3dd3877c169ea0f390_96.mp4" title="Diet Mountain Dew"
+                    target="_blank">
+                    <h3 style="text-align:center;">Diet Mountain Dew</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/158/9852fa4dc822c37171e1b54a7e13ab14_96.mp4" title="Džanum"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/158/D-anum-Serbian-2023-20230323055113-500x500.jpg" alt="Džanum"
+                        width="100%"></a>
+                <a href="https://aac.saavncdn.com/158/9852fa4dc822c37171e1b54a7e13ab14_96.mp4" title="Džanum"
+                    target="_blank">
+                    <h3 style="text-align:center;">Džanum</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/213/588dc66958d864c841f702f1e892d87f_96.mp4" title="Falling"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/213/Fine-Line-English-2019-20191211223631-500x500.jpg"
+                        alt="Falling" width="100%"></a>
+                <a href="https://aac.saavncdn.com/213/588dc66958d864c841f702f1e892d87f_96.mp4" title="Falling"
+                    target="_blank">
+                    <h3 style="text-align:center;">Falling</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/777/c8b51291697395e0493278112d27c93b_96.mp4"
+                    title="Hotline Bling (Sped Up Instrumental)" target="_blank">
+                    <img src="https://c.saavncdn.com/777/Hotline-Bling-Instrumental-Unknown-2023-20230413084740-500x500.jpg"
+                        alt="Hotline Bling (Sped Up Instrumental)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/777/c8b51291697395e0493278112d27c93b_96.mp4"
+                    title="Hotline Bling (Sped Up Instrumental)" target="_blank">
+                    <h3 style="text-align:center;">Hotline Bling (Sped Up Instrumental)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/883/c65156ffcf0520755ada6388d80a7062_96.mp4"
+                    title="I Wanna Be Yours (Sped Up Version) [Remix]" target="_blank">
+                    <img src="https://c.saavncdn.com/883/I-Wanna-Be-Yours-Sped-Up-Version-Remix-English-2022-20221122231933-500x500.jpg"
+                        alt="I Wanna Be Yours (Sped Up Version) [Remix]" width="100%"></a>
+                <a href="https://aac.saavncdn.com/883/c65156ffcf0520755ada6388d80a7062_96.mp4"
+                    title="I Wanna Be Yours (Sped Up Version) [Remix]" target="_blank">
+                    <h3 style="text-align:center;">I Wanna Be Yours (Sped Up Version)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/270/89d2fa3f3e096e28fa86d7d4a4cef70e_96.mp4"
+                    title="Is There Someone Else (sped up) (Remix)" target="_blank">
+                    <img src="https://c.saavncdn.com/270/Is-There-Someone-Else-sped-up-Remix-English-2023-20230120010733-500x500.jpg"
+                        alt="Is There Someone Else (sped up) (Remix)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/270/89d2fa3f3e096e28fa86d7d4a4cef70e_96.mp4"
+                    title="Is There Someone Else (sped up) (Remix)" target="_blank">
+                    <h3 style="text-align:center;">Is There Someone Else (sped up) (Remix)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/727/831f2ba034ff43cd6a6b7b8c2a35afd6_96.mp4"
+                    title="Judas 80s Version (Sped up/Looped)" target="_blank">
+                    <img src="https://c.saavncdn.com/727/Judas-80s-Version-Sped-up-Looped-Remix-English-2023-20230120191227-500x500.jpg"
+                        alt="Judas 80s Version (Sped up/Looped)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/727/831f2ba034ff43cd6a6b7b8c2a35afd6_96.mp4"
+                    title="Judas 80s Version (Sped up/Looped)" target="_blank">
+                    <h3 style="text-align:center;">Judas 80s Version (Sped up/Looped)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/310/b979b4865347c932406bb222fc537cc1_96.mp4"
+                    title="Just The Way You Are" target="_blank">
+                    <img src="https://c.saavncdn.com/310/Just-The-Way-You-Are-English-2010-500x500.jpg"
+                        alt="Just The Way You Are" width="100%"></a>
+                <a href="https://aac.saavncdn.com/310/b979b4865347c932406bb222fc537cc1_96.mp4"
+                    title="Just The Way You Are" target="_blank">
+                    <h3 style="text-align:center;">Just The Way You Are</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/955/8ea496fd5f4424d854e6a4e3e82b8fe1_96.mp4" title="Kill Bill"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/955/SOS-English-2022-20221208152657-500x500.jpg" alt="Kill Bill"
+                        width="100%"></a>
+                <a href="https://aac.saavncdn.com/955/8ea496fd5f4424d854e6a4e3e82b8fe1_96.mp4" title="Kill Bill"
+                    target="_blank">
+                    <h3 style="text-align:center;">Kill Bill</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/704/e057e88ebb5cc443b9ce084755ad6e36_96.mp4"
+                    title="Let Her Go (Sped Up) (Remix)" target="_blank">
+                    <img src="https://c.saavncdn.com/704/Let-Her-Go-Sped-Up-Remix-Spanish-2023-20230419200854-500x500.jpg"
+                        alt="Let Her Go (Sped Up) (Remix)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/704/e057e88ebb5cc443b9ce084755ad6e36_96.mp4"
+                    title="Let Her Go (Sped Up) (Remix)" target="_blank">
+                    <h3 style="text-align:center;">Let Her Go (Sped Up) (Remix)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/833/a482c0e3e302dc2356f420fbd3edb16d_96.mp4"
+                    title="Love Story Lofi (Remix)" target="_blank">
+                    <img src="https://c.saavncdn.com/833/Love-Story-Lofi-Remix-English-2022-20221230142615-500x500.jpg"
+                        alt="Love Story Lofi (Remix)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/833/a482c0e3e302dc2356f420fbd3edb16d_96.mp4"
+                    title="Love Story Lofi (Remix)" target="_blank">
+                    <h3 style="text-align:center;">Love Story Lofi (Remix)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/813/c2cb8dfd1f7bd0ebc9df8ac1b002e5d0_96.mp4"
+                    title="Mayonaka no Door -Stay With Me-" target="_blank">
+                    <img src="https://c.saavncdn.com/813/Mayonaka-no-Door-Stay-With-Me-Japanese-2023-20230411053722-500x500.jpg"
+                        alt="Mayonaka no Door -Stay With Me-" width="100%"></a>
+                <a href="https://aac.saavncdn.com/813/c2cb8dfd1f7bd0ebc9df8ac1b002e5d0_96.mp4"
+                    title="Mayonaka no Door -Stay With Me-" target="_blank">
+                    <h3 style="text-align:center;">Mayonaka no Door -Stay With Me-</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/807/4264074e945fe58d8d07d469b0144e54_96.mp4"
+                    title="Mayonaka no Door / Stay With Me (feat. Hikari)" target="_blank">
+                    <img src="https://c.saavncdn.com/807/Tokimeki-Mellow-Japanese-2021-20210321113136-500x500.jpg"
+                        alt="Mayonaka no Door / Stay With Me (feat. Hikari)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/807/4264074e945fe58d8d07d469b0144e54_96.mp4"
+                    title="Mayonaka no Door / Stay With Me (feat. Hikari)" target="_blank">
+                    <h3 style="text-align:center;">Mayonaka no Door / Stay With Me (feat. Hikari)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/593/e8c20700cd705e578be989db0fcc3d12_96.mp4" title="Moonlight"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/593/Moonlight-English-2023-20230224064248-500x500.jpg"
+                        alt="Moonlight" width="100%"></a>
+                <a href="https://aac.saavncdn.com/593/e8c20700cd705e578be989db0fcc3d12_96.mp4" title="Moonlight"
+                    target="_blank">
+                    <h3 style="text-align:center;">Moonlight</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/064/ac88d51a346678a05c5914e37195a432_96.mp4"
+                    title="My Heart Beats Like A Drum (Dam Dam Dam) (Radio Edit)" target="_blank">
+                    <img src="https://c.saavncdn.com/064/Planet-Pop-2013-500x500.jpg"
+                        alt="My Heart Beats Like A Drum (Dam Dam Dam) (Radio Edit)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/064/ac88d51a346678a05c5914e37195a432_96.mp4"
+                    title="My Heart Beats Like A Drum (Dam Dam Dam) (Radio Edit)" target="_blank">
+                    <h3 style="text-align:center;">My Heart Beats Like A Drum (Dam Dam Dam) (Radio Edit)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/000/447598ad34d23aca2f5a65bc4c297ef7_96.mp4" title="My Universe"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/000/My-Universe-English-2021-20211015134722-500x500.jpg"
+                        alt="My Universe" width="100%"></a>
+                <a href="https://aac.saavncdn.com/000/447598ad34d23aca2f5a65bc4c297ef7_96.mp4" title="My Universe"
+                    target="_blank">
+                    <h3 style="text-align:center;">My Universe</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/401/689d44930a653aa178a4f0c6e6002a8a_96.mp4" title="Past Lives"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/401/Past-Lives-English-2020-20230201115202-500x500.jpg"
+                        alt="Past Lives" width="100%"></a>
+                <a href="https://aac.saavncdn.com/401/689d44930a653aa178a4f0c6e6002a8a_96.mp4" title="Past Lives"
+                    target="_blank">
+                    <h3 style="text-align:center;">Past Lives</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/871/3bba7861b65687bf4d226b31afa50f5b_96.mp4" title="Radio (Sped Up)"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/871/Radio-Unknown-2023-20230614101901-500x500.jpg"
+                        alt="Radio (Sped Up)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/871/3bba7861b65687bf4d226b31afa50f5b_96.mp4" title="Radio (Sped Up)"
+                    target="_blank">
+                    <h3 style="text-align:center;">Radio (Sped Up)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/555/746743a96fabc8a7796b645dfdd0082d_96.mp4"
+                    title="Sharing The Night Together" target="_blank">
+                    <img src="https://c.saavncdn.com/555/Dr-Hook-The-Collection-English-2014-500x500.jpg"
+                        alt="Sharing The Night Together" width="100%"></a>
+                <a href="https://aac.saavncdn.com/555/746743a96fabc8a7796b645dfdd0082d_96.mp4"
+                    title="Sharing The Night Together" target="_blank">
+                    <h3 style="text-align:center;">Sharing The Night Together</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/642/a637158b7206c0f696f00cc67187cd7d_96.mp4" title="Someone You Loved"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/642/BREACH-English-2018-20181107133058-500x500.jpg"
+                        alt="Someone You Loved" width="100%"></a>
+                <a href="https://aac.saavncdn.com/642/a637158b7206c0f696f00cc67187cd7d_96.mp4" title="Someone You Loved"
+                    target="_blank">
+                    <h3 style="text-align:center;">Someone You Loved</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/374/8fac32dafd6270645fc4c7c42c776c7b_96.mp4" title="9"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/374/Something-Going-On-Kompa-Gouyad-Sped-Up-Mix-English-2022-20221219172951-500x500.jpg"
+                        alt="Something Going On (Kompa Gouyad Solo Slowed Down Edit)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/374/8fac32dafd6270645fc4c7c42c776c7b_96.mp4"
+                    title="Something Going On (Kompa Gouyad Solo Slowed Down Edit)" target="_blank">
+                    <h3 style="text-align:center;">Something Going On </h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/084/f6b6e6e8249920999aeee57ba89f9718_96.mp4"
+                    title="Somewhere Only We Know" target="_blank">
+                    <img src="https://c.saavncdn.com/084/somewhere-only-we-know-Unknown-2022-20220912141622-500x500.jpg"
+                        alt="Somewhere Only We Know" width="100%"></a>
+                <a href="https://aac.saavncdn.com/084/f6b6e6e8249920999aeee57ba89f9718_96.mp4"
+                    title="Somewhere Only We Know" target="_blank">
+                    <h3 style="text-align:center;">Somewhere Only We Know</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/535/ddb80bc5da9faa8e4caae43b6d5cd5b9_96.mp4"
+                    title="Somewhere Only We Know (Sped Up)" target="_blank">
+                    <img src="https://c.saavncdn.com/535/Somewhere-Only-We-Know-sped-up-slowed-Hopes-And-Fears-English-2023-20230411155514-500x500.jpg"
+                        alt="Somewhere Only We Know (Sped Up)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/535/ddb80bc5da9faa8e4caae43b6d5cd5b9_96.mp4"
+                    title="Somewhere Only We Know (Sped Up)" target="_blank">
+                    <h3 style="text-align:center;">Somewhere Only We Know (Sped Up)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/302/0707d46e126e246d80a203d6c6a57b4c_96.mp4"
+                    title="starboy (Sped up Version)" target="_blank">
+                    <img src="https://c.saavncdn.com/302/starboy-English-2023-20230331173551-500x500.jpg"
+                        alt="starboy (Sped up Version)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/302/0707d46e126e246d80a203d6c6a57b4c_96.mp4"
+                    title="starboy (Sped up Version)" target="_blank">
+                    <h3 style="text-align:center;">Starboy (Sped up Version)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/970/4763bedd263706f943b94ba59d2e3feb_96.mp4"
+                    title="Summertime Sadness" target="_blank">
+                    <img src="https://c.saavncdn.com/970/Born-To-Die-The-Paradise-Edition-English-2012-20190420034558-500x500.jpg"
+                        alt="Summertime Sadness" width="100%"></a>
+                <a href="https://aac.saavncdn.com/970/4763bedd263706f943b94ba59d2e3feb_96.mp4"
+                    title="Summertime Sadness" target="_blank">
+                    <h3 style="text-align:center;">Summertime Sadness</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/120/fa90389d31937b9ccc04e08ae96c8b2b_96.mp4" title="Teenage Dream"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/120/Teenage-Dream-English-2023-20230109232012-500x500.jpg"
+                        alt="Teenage Dream" width="100%"></a>
+                <a href="https://aac.saavncdn.com/120/fa90389d31937b9ccc04e08ae96c8b2b_96.mp4" title="Teenage Dream"
+                    target="_blank">
+                    <h3 style="text-align:center;">Teenage Dream</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/807/da7b30630fce143a61d3180c9b76315b_96.mp4"
+                    title="The Less I Know The Better" target="_blank">
+                    <img src="https://c.saavncdn.com/807/Currents-English-2015-500x500.jpg"
+                        alt="The Less I Know The Better" width="100%"></a>
+                <a href="https://aac.saavncdn.com/807/da7b30630fce143a61d3180c9b76315b_96.mp4"
+                    title="The Less I Know The Better" target="_blank">
+                    <h3 style="text-align:center;">The Less I Know The Better</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/127/79a283dce72eb8d720bdbd9891ef6bee_96.mp4"
+                    title="The Lost Soul Down (Slowed & Reverb)" target="_blank">
+                    <img src="https://c.saavncdn.com/127/The-Lost-Soul-Down-Slowed-Reverb-English-2023-20230510192305-500x500.jpg"
+                        alt="The Lost Soul Down (Slowed & Reverb)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/127/79a283dce72eb8d720bdbd9891ef6bee_96.mp4"
+                    title="The Lost Soul Down (Slowed & Reverb)" target="_blank">
+                    <h3 style="text-align:center;">The Lost Soul Down (Slowed & Reverb)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/815/9583a64641fdf7644e3a29d0a5a00807_96.mp4"
+                    title="Those Eyes (Sped Up)" target="_blank">
+                    <img src="https://c.saavncdn.com/815/Those-Eyes-Sped-Up-English-2023-20230420054353-500x500.jpg"
+                        alt="Those Eyes (Sped Up)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/815/9583a64641fdf7644e3a29d0a5a00807_96.mp4"
+                    title="Those Eyes (Sped Up)" target="_blank">
+                    <h3 style="text-align:center;">Those Eyes (Sped-Up)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/625/c707665228ee591e7e7ea017f2ed62e6_96.mp4" title="TV (sped up)"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/625/tv-sped-up-Unknown-2022-20230116104853-500x500.jpg"
+                        alt="TV (sped up)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/625/c707665228ee591e7e7ea017f2ed62e6_96.mp4" title="TV (sped up)"
+                    target="_blank">
+                    <h3 style="text-align:center;">TV (sped up)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/391/37e8a4e2477a7c3952f5595a368c21b9_96.mp4" title="until i found you"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/391/until-i-found-you-Unknown-2022-20220606173615-500x500.jpg"
+                        alt="until i found you" width="100%"></a>
+                <a href="https://aac.saavncdn.com/391/37e8a4e2477a7c3952f5595a368c21b9_96.mp4" title="until i found you"
+                    target="_blank">
+                    <h3 style="text-align:center;">Until I Found You</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/080/12f08fa0964178b7b00619102e1f14db_96.mp4"
+                    title="Until I Found You (Hindi Version)" target="_blank">
+                    <img src="https://c.saavncdn.com/080/Until-I-Found-You-Hindi-Version-Hindi-2023-20230405222144-500x500.jpg"
+                        alt="Until I Found You (Hindi Version)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/080/12f08fa0964178b7b00619102e1f14db_96.mp4"
+                    title="Until I Found You (Hindi Version)" target="_blank">
+                    <h3 style="text-align:center;">Until I Found You (Hindi Version)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/918/dbfa56e0c0dc8e1176a722b787961518_96.mp4"
+                    title="Wait a Minute - Sped Up" target="_blank">
+                    <img src="https://c.saavncdn.com/918/Teenage-Dream-English-2023-20230201161554-500x500.jpg"
+                        alt="Wait a Minute - Sped Up" width="100%"></a>
+                <a href="https://aac.saavncdn.com/918/dbfa56e0c0dc8e1176a722b787961518_96.mp4"
+                    title="Wait a Minute - Sped Up" target="_blank">
+                    <h3 style="text-align:center;">Wait a Minute (Sped Up)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/208/e735d2e6f69bb53fc85115a63e9feffd_96.mp4"
+                    title="WASTE (Sped Up Version)" target="_blank">
+                    <img src="https://c.saavncdn.com/208/WASTE-English-2022-20221108211316-500x500.jpg"
+                        alt="WASTE (Sped Up Version)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/208/e735d2e6f69bb53fc85115a63e9feffd_96.mp4"
+                    title="WASTE (Sped Up Version)" target="_blank">
+                    <h3 style="text-align:center;">WASTE (Sped Up Version)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/482/e402def0e5b4576f35503ba39ca9696f_96.mp4" title="West Coast"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/482/Ultraviolence-English-2014-500x500.jpg" alt="West Coast"
+                        width="100%"></a>
+                <a href="https://aac.saavncdn.com/482/e402def0e5b4576f35503ba39ca9696f_96.mp4" title="West Coast"
+                    target="_blank">
+                    <h3 style="text-align:center;">West Coast</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/425/f62986a848625002bdfe57888b3b1c65_96.mp4" title="What It Is (Up)"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/425/What-It-Is-Up-English-2023-20230703212639-500x500.jpg"
+                        alt="What It Is (Up)" width="100%"></a>
+                <a href="https://aac.saavncdn.com/815/9583a64641fdf7644e3a29d0a5a00807_96.mp4" title="What It Is (Up)"
+                    target="_blank">
+                    <h3 style="text-align:center;">What It Is (Up)</h3>
+                </a>
+            </div>
+            <div class="mdiv">
+                <a href="https://aac.saavncdn.com/356/994f02bd072ca4c8a74ac448a46ad596_96.mp4" title="You Got It"
+                    target="_blank">
+                    <img src="https://c.saavncdn.com/356/Mystery-Girl-English-2007-500x500.jpg" alt="You Got It"
+                        width="100%"></a>
+                <a href="https://aac.saavncdn.com/356/994f02bd072ca4c8a74ac448a46ad596_96.mp4" title="You Got It"
+                    target="_blank">
+                    <h3 style="text-align:center;">You Got It</h3>
+                </a>
+            </div>
+
+
+        </div>
+
+        <!-- <div class="title2">Top Charts</div>
+
+        <div class="title2">New Releases</div>
+
+        <div class="title2">Editorial Picks</div>
+
+        <div class="title2">Radio Stations</div>
+
+        <div class="title2">What's Hot</div>
+
+        <div class="title2">Recommended Artist Stations</div>
+
+        <div class="title2">Trending Podcasts</div>
+
+        <div class="title2">September To Remember</div>
+
+        <div class="title2">Top Genres & Moods</div>
+
+        <div class="title2">Ishq Wale Podcasts</div>
+
+        <div class="title2">New Releases Pop - Hindi</div>
+
+        <div class="title2">Top Albums - Hindi</div> -->
+
+        <div style="height: 25px;"></div>
+
+    </div>
+
+
+</body>
+
+</html>
